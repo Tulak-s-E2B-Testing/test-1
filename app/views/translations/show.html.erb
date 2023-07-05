@@ -1,0 +1,20 @@
+<%= render 'translations/header' %>
+
+<div class="translation-show">
+  <h2><%= @translation.source_language %> Translation</h2>
+
+  <div class="translation-details">
+    <p><strong>Source Text:</strong> <%= @translation.source_text %></p>
+    <p><strong>Target Languages:</strong></p>
+    <ul>
+      <% @translation.target_languages.each do |language| %>
+        <li><%= language.name %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="translation-actions">
+    <%= link_to 'Edit', edit_translation_path(@translation), class: 'btn btn-primary' %>
+    <%= link_to 'Back', translations_path, class: 'btn btn-secondary' %>
+  </div>
+</div>

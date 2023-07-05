@@ -1,0 +1,19 @@
+es:
+  hello: "Hola"
+  goodbye: "Adiós"
+
+fr:
+  hello: "Bonjour"
+  goodbye: "Au revoir"
+
+de:
+  hello: "Hallo"
+  goodbye: "Auf Wiedersehen"
+
+it:
+  hello: "Ciao"
+  goodbye: "Arrivederci"
+
+pt:
+  hello: "Olá"
+  goodbye: "Adeus"

@@ -1,0 +1,17 @@
+<%= form_for(@translation) do |f| %>
+  <div class="field">
+    <%= f.label :source_language %><br>
+    <%= f.text_field :source_language %>
+  </div>
+  <div class="field">
+    <%= f.label :target_languages %><br>
+    <%= f.text_field :target_languages %>
+  </div>
+  <div class="field">
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

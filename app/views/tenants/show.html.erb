@@ -1,0 +1,35 @@
+<%= render 'tenants_helper/tenant_header', tenant: @tenant %>
+
+<div class="tenant-details">
+  <h2><%= @tenant.name %></h2>
+  <p><%= @tenant.description %></p>
+
+  <h3>Translations</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Source Language</th>
+        <th>Target Languages</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tenant.translations.each do |translation| %>
+        <tr>
+          <td><%= translation.source_language.name %></td>
+          <td>
+            <% translation.target_languages.each do |language| %>
+              <%= language.name %><br>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to 'Edit', edit_translation_path(translation) %>
+            <%= link_to 'Delete', translation_path(translation), method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to 'New Translation', new_translation_path %>
+</div>

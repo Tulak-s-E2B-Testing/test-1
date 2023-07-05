@@ -1,0 +1,45 @@
+en:
+  tenants:
+    index:
+      title: "Tenants"
+      create_new_tenant: "Create New Tenant"
+    show:
+      title: "Tenant Details"
+  translations:
+    index:
+      title: "Translations"
+      create_new_translation: "Create New Translation"
+    show:
+      title: "Translation Details"
+    new:
+      title: "New Translation"
+      submit: "Submit"
+    edit:
+      title: "Edit Translation"
+      update: "Update"
+  helpers:
+    submit:
+      create: "Create %{model}"
+      update: "Update %{model}"
+  messages:
+    created: "%{model} was successfully created."
+    updated: "%{model} was successfully updated."
+    deleted: "%{model} was successfully deleted."
+  errors:
+    messages:
+      record_invalid: "Validation failed: %{errors}"
+      restrict_dependent_destroy:
+        has_many: "Cannot delete record because dependent %{record} exist"
+  activerecord:
+    models:
+      tenant: "Tenant"
+      translation: "Translation"
+      language: "Language"
+    attributes:
+      tenant:
+        name: "Name"
+      translation:
+        source_language: "Source Language"
+        target_languages: "Target Languages"
+      language:
+        name: "Name"
